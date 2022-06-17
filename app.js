@@ -17,3 +17,24 @@ Burger.addEventListener('click', () => {
     Head.classList.toggle('active')
     body.classList.toggle('no-scroll')
 })
+
+
+
+let header = $('.header'),
+    headerH = header.innerHeight(),
+    scrollOffset = $(window).scrollTop();
+
+checkScroll(scrollOffset)
+
+$(window).on('scroll', function () {
+    scrollOffset = $(window).scrollTop();
+    checkScroll(scrollOffset)
+});
+
+function checkScroll(scrollOffset) {
+    if (scrollOffset >= headerH) {
+        header.addClass('fixed');
+    } else {
+        header.removeClass('fixed');
+    }
+};
