@@ -43,6 +43,18 @@ body.no-scroll {
     z-index: 9;
 }
 
+.fixed.header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background: #27D07D;
+
+    padding: 25px 0;
+
+    transition: all 300ms;
+}
+
 .header-logo {
     z-index: -1;
 }
